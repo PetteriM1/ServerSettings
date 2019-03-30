@@ -3,12 +3,12 @@
   "title": "Example Settings",
   "icon": {
     "type": "url",
-    "data": "https://cdn.pixabay.com/photo/2015/12/04/22/20/gear-1077550_960_720.png"
+    "data": "https://nukkitx.com/data/resource_icons/0/183.jpg"
   },
   "content": [
     {
       "type": "label",
-      "text": "\u00A7a--- \u00A76ServerSettings v1.0 by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json"
+      "text": "\u00A7a--- \u00A76ServerSettings v${pom.version} by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json"
     }
   ]
 }

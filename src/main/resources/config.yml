@@ -1,0 +1,19 @@
+# Here you can add make elements run commands using build-in listener
+# You can also create your own listener that listens forms with id 6969
+
+# Put commands without /
+# For new line use \n
+# You can use colors with § but if you use them in button titles remember to add color to response too
+# If you want to run the command as player put -p before your command
+# If you want to run the command as console put -c before your command and use %player as placeholder for player name
+# You can use -sendMessage <text> for direct sendMessage() for player
+# With text boxes you can use %response for response text
+
+buttons:
+  Example 1: "-sendMessage You just clicked an example button!"
+  §1Blue Button: "-c tell %player §cOMG did you just click the §1blue §cbutton?!"
+
+textboxes:
+  Give your name: "-c tell %player Hello, %response"
+
+# TODO: More elements
