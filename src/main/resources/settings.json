@@ -3,12 +3,40 @@
   "title": "Example Settings",
   "icon": {
     "type": "url",
-    "data": "https://nukkitx.com/data/resource_icons/0/183.jpg"
+    "data": "https://i.ibb.co/wrCjmCm/Server-Settings-Icon.png"
   },
   "content": [
     {
       "type": "label",
-      "text": "\u00A7a--- \u00A76ServerSettings v${pom.version} by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json"
+      "text": "\u00A7a--- \u00A76ServerSettings v2.0 by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json\n"
+    },
+    {
+      "type": "toggle",
+      "text": "Example toggle"
+    },
+    {
+      "type": "slider",
+      "text": "Example slider",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "type": "step_slider",
+      "text": "Example step slider",
+      "steps": [
+        "Value 1", "Value 2", "Value 3"
+      ]
+    },
+    {
+      "type": "dropdown",
+      "text": "Example dropdown menu",
+      "options": [
+        "Value 1", "Value 2"
+      ]
+    },
+    {
+      "type": "input",
+      "text": "Example input box"
     }
   ]
 }

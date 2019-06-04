@@ -2,8 +2,9 @@ package serversettings;
 
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
-import cn.nukkit.event.player.PlayerFormRespondedEvent;
 import cn.nukkit.event.player.PlayerServerSettingsRequestEvent;
+import cn.nukkit.event.server.DataPacketReceiveEvent;
+import cn.nukkit.network.protocol.ModalFormResponsePacket;
 import cn.nukkit.network.protocol.ServerSettingsResponsePacket;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
@@ -27,7 +28,7 @@ public class Main extends PluginBase implements Listener {
     @EventHandler
     public void onSettingsRequest(PlayerServerSettingsRequestEvent e) {
         ServerSettingsResponsePacket pk = new ServerSettingsResponsePacket();
-        pk.formId = 6969;
+        pk.formId = c.getInt("formID");
 
         try {
             Object obj = new JSONParser().parse(new FileReader(getDataFolder() + "/settings.json"));
@@ -41,7 +42,12 @@ public class Main extends PluginBase implements Listener {
     }
 
     @EventHandler
-    public void onFormResponse(PlayerFormRespondedEvent e) {
-
+    public void onSettingsResponse(DataPacketReceiveEvent e) {
+        if (e.getPacket() instanceof ModalFormResponsePacket && c.getBoolean("build-in-listener")) {
+            ModalFormResponsePacket pk = (ModalFormResponsePacket) e.getPacket();
+            if (pk.formId == c.getInt("formID")) {
+                //TODO
+            }
+        }
     }
 }

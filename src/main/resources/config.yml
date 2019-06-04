@@ -1,6 +1,12 @@
-# Here you can add make elements run commands using build-in listener
-# You can also create your own listener that listens forms with id 6969
+#-- Config file for ServerSettings version 2.0 --#
 
+# Form id
+formID: 6969
+# Enable build-in event listener
+build-in-listener: true
+
+# Here you can add make elements run commands using the build-in listener
+# You can also create your own listener which listens forms with the id
 # Put commands without /
 # For new line use \n
 # You can use colors with § but if you use them in button titles remember to add color to response too
@@ -9,11 +15,20 @@
 # You can use -sendMessage <text> for direct sendMessage() for player
 # With text boxes you can use %response for response text
 
-buttons:
-  Example 1: "-sendMessage You just clicked an example button!"
-  §1Blue Button: "-c tell %player §cOMG did you just click the §1blue §cbutton?!"
+toggle:
+  Enable something: "-sendMessage You enabled something"
 
-textboxes:
+slider:
+  1: ""
+  2: ""
+
+step_slider:
+  1: ""
+  2: ""
+
+dropdown:
+  Option 1: "-sendMessage You selected §eOption 1"
+  Option 2: "-sendMessage You selected §eOption 2"
+
+input:
   Give your name: "-c tell %player Hello, %response"
-
-# TODO: More elements
