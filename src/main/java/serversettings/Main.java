@@ -8,6 +8,7 @@ import cn.nukkit.network.protocol.ModalFormResponsePacket;
 import cn.nukkit.network.protocol.ServerSettingsResponsePacket;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
+import com.creeperface.nukkit.placeholderapi.api.PlaceholderAPI;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 
@@ -15,13 +16,16 @@ import java.io.FileReader;
 
 public class Main extends PluginBase implements Listener {
 
-    Config c;
+    private Config c;
+
+    private boolean usePlaceholderAPI;
 
     @Override
     public void onEnable() {
         saveDefaultConfig();
         c = getConfig();
         saveResource("settings.json");
+        usePlaceholderAPI = getServer().getPluginManager().isPluginEnabled(getServer().getPluginManager().getPlugin("PlaceholderAPI"));
         getServer().getPluginManager().registerEvents(this, this);
     }
 
@@ -33,7 +37,7 @@ public class Main extends PluginBase implements Listener {
         try {
             Object obj = new JSONParser().parse(new FileReader(getDataFolder() + "/settings.json"));
             JSONObject settings = (JSONObject) obj;
-            pk.data = settings.toString();
+            pk.data = usePlaceholderAPI ? PlaceholderAPI.getInstance().translateString(settings.toString()) : settings.toString();
         } catch(Exception ex) {
             pk.data = "";
         }
