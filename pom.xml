@@ -6,7 +6,7 @@
 
     <groupId>serversettings</groupId>
     <artifactId>ServerSettings</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <build>
         <defaultGoal>install</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>

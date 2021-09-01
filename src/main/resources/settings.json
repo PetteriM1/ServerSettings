@@ -1,6 +1,6 @@
 {
   "type": "custom_form",
-  "title": "Example Settings",
+  "title": "Example",
   "icon": {
     "type": "url",
     "data": "https://cdn.pixabay.com/photo/2015/12/04/22/20/gear-1077550_960_720.png"
@@ -8,7 +8,7 @@
   "content": [
     {
       "type": "label",
-      "text": "\u00A7a--- \u00A76ServerSettings v1.0 by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json"
+      "text": "\u00A7a--- \u00A76ServerSettings v1.0.1 by PetteriM1 \u00A7a--- \n\n\u00A7bYou can edit this page in settings.json"
     }
   ]
 }
