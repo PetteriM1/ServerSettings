@@ -1,5 +1,5 @@
 name: ServerSettings
 main: serversettings.Main
 version: "${pom.version}"
-api: ["1.0.0"]
+api: ["1.0.13"]
 author: PetteriM1
